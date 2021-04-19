@@ -111,7 +111,7 @@ function Juega(visor, letra) {
       else if (CompruebaPalabra(visor))
          FinJuego(true)
       } else {
-         alert('Pulsa Juego nuevo para comenzar\nuna partida nueva.')
+         alert('Pulsa START para comenzar\nuna partida nueva.')
    }
 }
 
@@ -210,7 +210,7 @@ function FinJuego(resultado) {
       <td align=center><input type=button name=botY value=" Y " onClick="Juega(this.form, 'y')">
       <td align=center><input type=button name=botZ value=" Z " onClick="Juega(this.form, 'z')">
       <td colspan=3 align=center><input type=button name=Inicia value="  START   " onClick="IniciaJuego(this.form)">
-      <td align=center><input type=button value=Limpiar name=B1 onClick="this.form.ganadas.value='0'; this.form.perdidas.value='0'">
+      <td align=center><input type=button value=CLEAR name=B1 onClick="this.form.ganadas.value='0'; this.form.perdidas.value='0'">
   </TABLE>
   </CENTER>
 </FORM>
