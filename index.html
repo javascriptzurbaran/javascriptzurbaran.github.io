@@ -148,13 +148,13 @@ function FinJuego(resultado) {
    jugando = false 
    if (resultado) {
       document.visor.ganadas.value++
-      alert("Acertaste !")
+      alert("Acertaste!")
    } else {
      document.visor.perdidas.value++
      //construye la palabra solucion
      for (var x = 0; x < palabra.length; x++)
         solucion += palabra[x]
-     alert("Has fallado !\n La palabra era: " + solucion)
+     alert("Has fallado!\n La palabra era: " + solucion)
    }
 }
 </SCRIPT>
