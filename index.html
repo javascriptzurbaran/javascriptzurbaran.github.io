@@ -147,10 +147,10 @@ function FinJuego(resultado) {
    var solucion = ""
    jugando = false 
    if (resultado) {
-      document.visor.wins.value++
+      document.visor.ganadas.value++
       alert("Acertaste!")
    } else {
-     document.visor.lost.value++
+     document.visor.perdidas.value++
      //construye la palabra solucion
      for (var x = 0; x < palabra.length; x++)
         solucion += palabra[x]
@@ -188,7 +188,7 @@ function FinJuego(resultado) {
       <td align=center><input type=button name=botJ value=" J " onClick="Juega(this.form, 'j')">
       <td align=center><input type=button name=botK value=" K " onClick="Juega(this.form, 'k')">
       <td align=center><input type=button name=botL value=" L " onClick="Juega(this.form, 'l')">
-      <td align=right valign=middle>WINS: <input type=text name=WINS size=4 value=0>
+      <td align=right valign=middle>Ganadas: <input type=text name=Ganadas size=4 value=0>
     <tr>
       <td align=center><input type=button name=botM value=" M " onClick="Juega(this.form, 'm')">
       <td align=center><input type=button name=botN value=" N " onClick="Juega(this.form, 'n')">
@@ -196,7 +196,7 @@ function FinJuego(resultado) {
       <td align=center><input type=button name=botO value=" O " onClick="Juega(this.form, 'o')">
       <td align=center><input type=button name=botP value=" P " onClick="Juega(this.form, 'p')">
       <td align=center><input type=button name=botQ value=" Q " onClick="Juega(this.form, 'q')">
-      <td align=right valign=middle>LOST: <input type=text name=LOST size=4 value=0>
+      <td align=right valign=middle>Perdidas: <input type=text name=Perdidas size=4 value=0>
     <tr>
       <td align=center><input type=button name=botR value=" R " onClick="Juega(this.form, 'r')">
       <td align=center><input type=button name=botS value=" S " onClick="Juega(this.form, 's')">
