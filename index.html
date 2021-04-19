@@ -34,7 +34,7 @@ var libreriaPalabras = new Array("m u l t i m e d i a", "i n t e r n a u t a", "
 "f u e g o", "p a z", "g u e r r a", "e t i q u e t a", "d i n e r o",
 "g a r g o l a", "a e r o p u e r t o", "t o c i n o", "e s p a c i o", "b a t a l l a",
 "d e l i n c u e n t e", "a e r o d i n a m i c o", "c o n s o l a", "g u e r r a", "l o t e r i a",
-"e j e c u t o r", "c u l p a b l e", "h i b r i d o", "b a r r i c a d a", "b r u t o")
+"e j e c u t o r", "c u l p a b l e", "h i b r i d o", "b a r r i c a d a", "b r u t o" )
 var partes = 0
 var colNueva = 0
 var jugando
@@ -111,7 +111,7 @@ function Juega(visor, letra) {
       else if (CompruebaPalabra(visor))
          FinJuego(true)
       } else {
-         alert('Pulsa START para comenzar\nuna partida nueva.')
+         alert('Pulsa Juego nuevo para comenzar\nuna partida nueva.')
    }
 }
 
@@ -148,13 +148,13 @@ function FinJuego(resultado) {
    jugando = false 
    if (resultado) {
       document.visor.ganadas.value++
-      alert("Acertaste!")
+      alert("Acertaste !")
    } else {
      document.visor.perdidas.value++
      //construye la palabra solucion
      for (var x = 0; x < palabra.length; x++)
         solucion += palabra[x]
-     alert("Has fallado!\n La palabra era: " + solucion)
+     alert("Has muerto !\n La palabra era: " + solucion)
    }
 }
 </SCRIPT>
@@ -188,7 +188,7 @@ function FinJuego(resultado) {
       <td align=center><input type=button name=botJ value=" J " onClick="Juega(this.form, 'j')">
       <td align=center><input type=button name=botK value=" K " onClick="Juega(this.form, 'k')">
       <td align=center><input type=button name=botL value=" L " onClick="Juega(this.form, 'l')">
-      <td align=right valign=middle>Ganadas: <input type=text name=Ganadas size=4 value=0>
+      <td align=right valign=middle>Ganadas: <input type=text name=ganadas size=4 value=0>
     <tr>
       <td align=center><input type=button name=botM value=" M " onClick="Juega(this.form, 'm')">
       <td align=center><input type=button name=botN value=" N " onClick="Juega(this.form, 'n')">
@@ -196,7 +196,7 @@ function FinJuego(resultado) {
       <td align=center><input type=button name=botO value=" O " onClick="Juega(this.form, 'o')">
       <td align=center><input type=button name=botP value=" P " onClick="Juega(this.form, 'p')">
       <td align=center><input type=button name=botQ value=" Q " onClick="Juega(this.form, 'q')">
-      <td align=right valign=middle>Perdidas: <input type=text name=Perdidas size=4 value=0>
+      <td align=right valign=middle>Perdidas: <input type=text name=perdidas size=4 value=0>
     <tr>
       <td align=center><input type=button name=botR value=" R " onClick="Juega(this.form, 'r')">
       <td align=center><input type=button name=botS value=" S " onClick="Juega(this.form, 's')">
@@ -209,8 +209,8 @@ function FinJuego(resultado) {
       <td align=center><input type=button name=botX value=" X " onClick="Juega(this.form, 'x')">
       <td align=center><input type=button name=botY value=" Y " onClick="Juega(this.form, 'y')">
       <td align=center><input type=button name=botZ value=" Z " onClick="Juega(this.form, 'z')">
-      <td colspan=3 align=center><input type=button name=Inicia value="  START   " onClick="IniciaJuego(this.form)">
-      <td align=center><input type=button value=CLEAR name=B1 onClick="this.form.wins.value='0'; this.form.lost.value='0'">
+      <td colspan=3 align=center><input type=button name=Inicia value="  Juego nuevo   " onClick="IniciaJuego(this.form)">
+      <td align=center><input type=button value=Limpiar name=B1 onClick="this.form.ganadas.value='0'; this.form.perdidas.value='0'">
   </TABLE>
   </CENTER>
 </FORM>
